@@ -1,0 +1,6 @@
+/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/src/CMakeFiles/AISOYAPI.dir
+/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/src/CMakeFiles/AISOYGLOBAL.dir
+/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/src/CMakeFiles/DRACO_GPIO_MOD.dir
+/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/src/CMakeFiles/MIRF.dir
+/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/src/CMakeFiles/NRF24L01.dir
+/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/src/CMakeFiles/main.dir

@@ -1,0 +1,266 @@
+<!--
+	BotMovil Controller for AISoy1
+	AISoy Robotics 2011
+	Miguel Sempere
+	msempere@aisoy.com
+-->
+
+<html>
+
+	<head>
+		<meta charset="utf-8" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"> 
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		
+		
+		<link rel="apple-touch-icon" href="aisoy_logo.png" />
+		<link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet" type="text/css" />
+		<link rel="apple-touch-startup-image" href="startup.png">
+		
+		
+		<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+		<script language="javascript" src="./newSwipes.js"></script>
+		
+		
+		<style type="text/css"> 
+		.ui-select-inline {
+			width: auto;
+			display: inline-block;
+		}
+		.ui-select {
+			width: auto;
+			display: inline-block;
+		}
+		</style>
+		
+		
+		
+		<script>
+		
+		
+			//refresh image interval, default 1000 (every second)
+			const refreshImage=500;
+			
+			//image tap positions
+			const startLeft=0;
+			const endLeft=100;
+			const endCenter=200;
+			const endRight=290;
+			
+			//define servo max/min movements
+			const maxServo=10;
+			const minServo=0;
+			
+			//center servo position
+			const centerServo=5;
+			
+			//head movements
+			var horizontalHead=centerServo;
+			var verticalHead=centerServo;
+		
+		
+			//next movement velocity, change with SetNewVelocity()
+			var actualVelocity=220;
+		
+			
+			//control swipe movements
+			$('.frameContainer').live('swipeup',function() {
+				//alert("swiped UP");
+				Change('up');
+			});
+			$('.frameContainer').live('swipedown',function() {
+				//alert("swiped DOWN");
+				Change('down');
+			});
+			$('.frameContainer').live('swiperight',function() {
+				//alert("swiped RIGHT");
+				Change('right');
+			});
+			$('.frameContainer').live('swipeleft',function() {
+				//alert("swiped LEFT");
+				Change('left');
+			});
+			
+			
+			//control finger taps
+			$('.frameContainer').live('tap',function(event) {
+				var tap_pos=x = event.clientX + document.body.scrollLeft +document.documentElement.scrollLeft;
+				
+				//image left tap
+				if(tap_pos>=startLeft & tap_pos<=endLeft){
+					//MoveHead('left');
+					MoveHead('right');
+				}
+				//image center tap
+				else if(tap_pos>endLeft & tap_pos<=endCenter){
+					ResetHead();
+				}
+				//image right tap
+				else if(tap_pos>endCenter & tap_pos<=endRight){
+					//MoveHead('right');
+					MoveHead('left');
+				}
+			});
+			
+			
+			//change botMovil movements
+			function Change(side){
+				if(side=='left'){
+					$.post('../io/in', {'data': "#change#left#\n\r"});
+				}
+				else if(side=='right'){
+					$.post('../io/in', {'data': "#change#right#\n\r"});
+				}
+				
+				else if(side=='up'){
+					$.post('../io/in', {'data': "#change#up#\n\r"});
+				}
+				
+				else if(side=='down'){
+					$.post('../io/in', {'data': "#change#down#\n\r"});
+				}
+				else if(side=='stop'){
+					$.post('../io/in', {'data': "#change#stop#\n\r"});
+				}
+			}
+			
+			
+			//center head position
+			function ResetHead(){
+				
+				//bot problems with vertical servo
+				//$.post('../io/in', {'data': "#head#vertical#5#\n\r"});
+				$.post('../io/in', {'data': "#head#horizontal#5#\n\r"});
+				
+				//reset horizontal servo position
+				horizontalHead=centerServo;
+				verticalHead=centerServo;
+			}
+	
+	
+			//head movements
+			function MoveHead(side){
+				if(side=='up' && verticalHead<maxServo){
+					verticalHead=verticalHead+2;
+					$.post('../io/in', {'data': "#head#vertical#" +verticalHead+ "#\n\r"});
+				}
+				else if(side=='down' && verticalHead>minServo){
+					verticalHead=verticalHead-2;
+					$.post('../io/in', {'data': "#head#vertical#" +verticalHead+ "#\n\r"});
+				}
+				else if(side=='left' && horizontalHead>minServo){
+					horizontalHead=horizontalHead-2;
+					$.post('../io/in', {'data': "#head#horizontal#" +horizontalHead+ "#\n\r"});
+				}
+				else if(side=='right' && horizontalHead<maxServo){
+					horizontalHead=horizontalHead+2;
+					$.post('../io/in', {'data': "#head#horizontal#" +horizontalHead+ "#\n\r"});
+				}
+			}
+			
+			//update image every second
+			function updateImage(){
+				$('#frame').attr('src','captured.jpg?'+Math.random());
+				setTimeout(updateImage, refreshImage);
+			}
+    
+
+			//start updating image when DOM ready
+			$(document).ready(function(){
+				updateImage();
+			})
+			
+			
+			//send phrase to the bot
+			function BotSay(what){
+				$.post('../io/in', {'data': "#botsay#" +what+ "#\n\r"});
+			}
+			
+			//change motors velocity
+			function SetNewVelocity(newVelocity){
+				$.post('../io/in', {'data': "#botvelocity#" +newVelocity+ "#\n\r"});
+			}
+			
+			
+			//change events for velocity and bot.say
+			$('.select-choice-1').live('change',function() {
+				SetNewVelocity($(this).val());
+				
+			});
+			
+			$('.select-choice-2').live('change',function() {
+				BotSay($(this).val());
+			});
+			
+			
+		</script>
+		
+	</head>
+	
+	
+	<body>
+		<div data-role="page" style="background:white">
+		
+			<div data-role="header" data-backbtn="false" data-position="inline" id="homelink" >
+			
+				<div style="height:50px;">
+				
+					<table>
+						<tr>
+							
+							
+							<td>
+								<div class="headerLogo">
+									<a href="http://www.aisoy.es" rel="external">
+										<img src="aisoy_logo.png">
+									</a>
+								</div>
+							</td>
+							
+							
+							<td>
+								<div>
+									<font size="5" color="white">
+										BotMovil Controller
+									</font>
+								</div>
+							</td>
+							
+						</tr>
+					</table>
+					
+				</div>
+				
+			</div>
+			
+			<div data-role="content">
+			
+				<div data-role="controlgroup" data-type="horizontal" style="display:inline-block; width: auto">
+					<select name="select-choice-1" id="select-choice-1" class="select-choice-1" >
+						<option>Velocidad</option>
+						<option value="120">120</option>
+						<option value="150">150</option>
+						<option value="200">200</option>
+						<option value="250">Max.</option>
+					</select> 
+
+					<select name="select-choice-2" id="select-choice-2" class="select-choice-2" >
+						<option>Frases</option>
+						<option value="Hola carabola.">Saludo</option>
+						<option value="Adios. Hasta pronto.">Adios</option>
+						<option value="Soy el modelo aisoy uno de la empresa aisoy robotics.">Version</option>
+						<option value="JA JA JA JA JA.">Risa</option>
+					</select>
+				</div>
+				
+				<div class="frameContainer" style="height:220px; width:280px;">
+					<img id="frame" class="botVisionImg" src="captured.jpg" height="100%" width="100%">
+				</div>
+				
+			</div>
+			
+		</div>
+	</body>
+	
+</html>

@@ -1,0 +1,1 @@
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-g++    -mfpu=neon   CMakeFiles/main.dir/main.cpp.o  -o main -rdynamic -laisoy1 libMIRF.a libAISOYAPI.a libNRF24L01.a libDRACO_GPIO_MOD.a 

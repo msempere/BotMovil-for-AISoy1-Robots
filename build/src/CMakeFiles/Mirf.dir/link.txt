@@ -1,0 +1,2 @@
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-ar cr libMirf.a  CMakeFiles/Mirf.dir/mirf.c.o
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-ranlib libMirf.a

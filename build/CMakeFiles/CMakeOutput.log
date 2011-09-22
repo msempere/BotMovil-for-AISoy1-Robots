@@ -1,0 +1,240 @@
+The target system is: Linux - 1 - 
+The host system is: Linux - 2.6.32-32-generic - i686
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-gcc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-g++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+CMakeCXXCompilerId.cpp:73: warning: deprecated conversion from string constant to 'char*'
+CMakeCXXCompilerId.cpp:163: warning: deprecated conversion from string constant to 'char*'
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: se ingresa al directorio «/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp»
+/usr/bin/cmake -E cmake_progress_report /home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/testCCompiler.c.o
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-gcc    -o CMakeFiles/cmTryCompileExec.dir/testCCompiler.c.o   -c /home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-gcc        CMakeFiles/cmTryCompileExec.dir/testCCompiler.c.o  -o cmTryCompileExec -rdynamic 
+make[1]: se sale del directorio «/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp»
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: se ingresa al directorio «/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp»
+/usr/bin/cmake -E cmake_progress_report /home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-gcc    -o CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-gcc       -v CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec -rdynamic  
+Using built-in specs.
+Target: arm-none-linux-gnueabi
+Configured with: /scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/src/gcc-4.3/configure --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu --target=arm-none-linux-gnueabi --enable-threads --disable-libmudflap --disable-libssp --disable-libstdcxx-pch --with-gnu-as --with-gnu-ld --with-specs='%{funwind-tables|fno-unwind-tables|mabi=*|ffreestanding|nostdlib:;:-funwind-tables}' --enable-languages=c,c++ --enable-shared --enable-symvers=gnu --enable-__cxa_atexit --with-pkgversion='Sourcery G++ Lite 2009q1-203' --with-bugurl=https://support.codesourcery.com/GNUToolchain/ --disable-nls --prefix=/opt/codesourcery --with-sysroot=/opt/codesourcery/arm-none-linux-gnueabi/libc --with-build-sysroot=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/install/arm-none-linux-gnueabi/libc --with-gmp=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/obj/host-libs-2009q1-203-arm-none-linux-gnueabi-i686-pc-linux-gnu/usr --with-mpfr=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/obj/host-libs-2009q1-203-arm-none-linux-gnueabi-i686-pc-linux-gnu/usr --disable-libgomp --enable-poison-system-directories --with-build-time-tools=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/install/arm-none-linux-gnueabi/bin --with-build-time-tools=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/install/arm-none-linux-gnueabi/bin
+Thread model: posix
+gcc version 4.3.3 (Sourcery G++ Lite 2009q1-203) 
+COMPILER_PATH=/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../libexec/gcc/arm-none-linux-gnueabi/4.3.3/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../libexec/gcc/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/bin/
+LIBRARY_PATH=/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/lib/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/lib/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec' '-rdynamic' '-funwind-tables'
+ /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../libexec/gcc/arm-none-linux-gnueabi/4.3.3/collect2 --sysroot=/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux.so.3 -X -m armelf_linux_eabi -o cmTryCompileExec /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/crtbegin.o -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3 -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/lib -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/lib -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/crtend.o /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+make[1]: se sale del directorio «/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp»
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-none-linux-gnueabi-ld|ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build]
+  ignore line: [make[1]: se ingresa al directorio «/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp»]
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-gcc    -o CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1]
+  ignore line: [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-gcc       -v CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [Target: arm-none-linux-gnueabi]
+  ignore line: [Configured with: /scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/src/gcc-4.3/configure --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu --target=arm-none-linux-gnueabi --enable-threads --disable-libmudflap --disable-libssp --disable-libstdcxx-pch --with-gnu-as --with-gnu-ld --with-specs='%{funwind-tables|fno-unwind-tables|mabi=*|ffreestanding|nostdlib:]
+  ignore line: [:-funwind-tables}' --enable-languages=c,c++ --enable-shared --enable-symvers=gnu --enable-__cxa_atexit --with-pkgversion='Sourcery G++ Lite 2009q1-203' --with-bugurl=https://support.codesourcery.com/GNUToolchain/ --disable-nls --prefix=/opt/codesourcery --with-sysroot=/opt/codesourcery/arm-none-linux-gnueabi/libc --with-build-sysroot=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/install/arm-none-linux-gnueabi/libc --with-gmp=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/obj/host-libs-2009q1-203-arm-none-linux-gnueabi-i686-pc-linux-gnu/usr --with-mpfr=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/obj/host-libs-2009q1-203-arm-none-linux-gnueabi-i686-pc-linux-gnu/usr --disable-libgomp --enable-poison-system-directories --with-build-time-tools=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/install/arm-none-linux-gnueabi/bin --with-build-time-tools=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/install/arm-none-linux-gnueabi/bin]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.3.3 (Sourcery G++ Lite 2009q1-203) ]
+  ignore line: [COMPILER_PATH=/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../libexec/gcc/arm-none-linux-gnueabi/4.3.3/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../libexec/gcc/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/bin/]
+  ignore line: [LIBRARY_PATH=/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/lib/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/lib/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec' '-rdynamic' '-funwind-tables']
+  link line: [ /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../libexec/gcc/arm-none-linux-gnueabi/4.3.3/collect2 --sysroot=/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux.so.3 -X -m armelf_linux_eabi -o cmTryCompileExec /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/crtbegin.o -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3 -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/lib -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/lib -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/crtend.o /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o]
+    arg [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../libexec/gcc/arm-none-linux-gnueabi/4.3.3/collect2] ==> ignore
+    arg [--sysroot=/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec] ==> ignore
+    arg [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o] ==> ignore
+    arg [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o] ==> ignore
+    arg [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/crtbegin.o] ==> ignore
+    arg [-L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3] ==> dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3]
+    arg [-L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc] ==> dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc]
+    arg [-L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/lib] ==> dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/lib]
+    arg [-L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/lib] ==> dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/lib]
+    arg [-L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib] ==> dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib]
+    arg [CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/crtend.o] ==> ignore
+    arg [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3] ==> [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.3.3]
+  collapse dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc] ==> [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/lib/gcc]
+  collapse dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/lib] ==> [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/arm-none-linux-gnueabi/lib]
+  collapse dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/lib] ==> [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/arm-none-linux-gnueabi/libc/lib]
+  collapse dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib] ==> [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/arm-none-linux-gnueabi/libc/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.3.3;/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/lib/gcc;/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/arm-none-linux-gnueabi/lib;/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/arm-none-linux-gnueabi/libc/lib;/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/arm-none-linux-gnueabi/libc/usr/lib]
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: se ingresa al directorio «/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp»
+/usr/bin/cmake -E cmake_progress_report /home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec.dir/testCXXCompiler.cxx.o
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-g++     -o CMakeFiles/cmTryCompileExec.dir/testCXXCompiler.cxx.o -c /home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-g++         CMakeFiles/cmTryCompileExec.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec -rdynamic 
+make[1]: se sale del directorio «/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp»
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: se ingresa al directorio «/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp»
+/usr/bin/cmake -E cmake_progress_report /home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-g++     -o CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-g++        -v CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec -rdynamic  
+Using built-in specs.
+Target: arm-none-linux-gnueabi
+Configured with: /scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/src/gcc-4.3/configure --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu --target=arm-none-linux-gnueabi --enable-threads --disable-libmudflap --disable-libssp --disable-libstdcxx-pch --with-gnu-as --with-gnu-ld --with-specs='%{funwind-tables|fno-unwind-tables|mabi=*|ffreestanding|nostdlib:;:-funwind-tables}' --enable-languages=c,c++ --enable-shared --enable-symvers=gnu --enable-__cxa_atexit --with-pkgversion='Sourcery G++ Lite 2009q1-203' --with-bugurl=https://support.codesourcery.com/GNUToolchain/ --disable-nls --prefix=/opt/codesourcery --with-sysroot=/opt/codesourcery/arm-none-linux-gnueabi/libc --with-build-sysroot=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/install/arm-none-linux-gnueabi/libc --with-gmp=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/obj/host-libs-2009q1-203-arm-none-linux-gnueabi-i686-pc-linux-gnu/usr --with-mpfr=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/obj/host-libs-2009q1-203-arm-none-linux-gnueabi-i686-pc-linux-gnu/usr --disable-libgomp --enable-poison-system-directories --with-build-time-tools=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/install/arm-none-linux-gnueabi/bin --with-build-time-tools=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/install/arm-none-linux-gnueabi/bin
+Thread model: posix
+gcc version 4.3.3 (Sourcery G++ Lite 2009q1-203) 
+COMPILER_PATH=/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../libexec/gcc/arm-none-linux-gnueabi/4.3.3/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../libexec/gcc/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/bin/
+LIBRARY_PATH=/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/lib/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/lib/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec' '-rdynamic' '-shared-libgcc' '-funwind-tables'
+ /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../libexec/gcc/arm-none-linux-gnueabi/4.3.3/collect2 --sysroot=/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux.so.3 -X -m armelf_linux_eabi -o cmTryCompileExec /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/crtbegin.o -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3 -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/lib -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/lib -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/crtend.o /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o
+make[1]: se sale del directorio «/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp»
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-none-linux-gnueabi-ld|ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build]
+  ignore line: [make[1]: se ingresa al directorio «/home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp»]
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/aisoy-sdk/repo/SDK/apps/msempere/newBotMovil/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-g++     -o CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1]
+  ignore line: [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-g++        -v CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [Target: arm-none-linux-gnueabi]
+  ignore line: [Configured with: /scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/src/gcc-4.3/configure --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu --target=arm-none-linux-gnueabi --enable-threads --disable-libmudflap --disable-libssp --disable-libstdcxx-pch --with-gnu-as --with-gnu-ld --with-specs='%{funwind-tables|fno-unwind-tables|mabi=*|ffreestanding|nostdlib:]
+  ignore line: [:-funwind-tables}' --enable-languages=c,c++ --enable-shared --enable-symvers=gnu --enable-__cxa_atexit --with-pkgversion='Sourcery G++ Lite 2009q1-203' --with-bugurl=https://support.codesourcery.com/GNUToolchain/ --disable-nls --prefix=/opt/codesourcery --with-sysroot=/opt/codesourcery/arm-none-linux-gnueabi/libc --with-build-sysroot=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/install/arm-none-linux-gnueabi/libc --with-gmp=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/obj/host-libs-2009q1-203-arm-none-linux-gnueabi-i686-pc-linux-gnu/usr --with-mpfr=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/obj/host-libs-2009q1-203-arm-none-linux-gnueabi-i686-pc-linux-gnu/usr --disable-libgomp --enable-poison-system-directories --with-build-time-tools=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/install/arm-none-linux-gnueabi/bin --with-build-time-tools=/scratch/mitchell/builds/4.3-arm-none-linux-gnueabi-respin/lite/install/arm-none-linux-gnueabi/bin]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.3.3 (Sourcery G++ Lite 2009q1-203) ]
+  ignore line: [COMPILER_PATH=/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../libexec/gcc/arm-none-linux-gnueabi/4.3.3/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../libexec/gcc/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/bin/]
+  ignore line: [LIBRARY_PATH=/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/lib/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/lib/:/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec' '-rdynamic' '-shared-libgcc' '-funwind-tables']
+  link line: [ /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../libexec/gcc/arm-none-linux-gnueabi/4.3.3/collect2 --sysroot=/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux.so.3 -X -m armelf_linux_eabi -o cmTryCompileExec /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/crtbegin.o -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3 -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/lib -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/lib -L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/crtend.o /home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o]
+    arg [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../libexec/gcc/arm-none-linux-gnueabi/4.3.3/collect2] ==> ignore
+    arg [--sysroot=/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec] ==> ignore
+    arg [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crt1.o] ==> ignore
+    arg [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crti.o] ==> ignore
+    arg [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/crtbegin.o] ==> ignore
+    arg [-L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3] ==> dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3]
+    arg [-L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc] ==> dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc]
+    arg [-L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/lib] ==> dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/lib]
+    arg [-L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/lib] ==> dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/lib]
+    arg [-L/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib] ==> dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib]
+    arg [CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/crtend.o] ==> ignore
+    arg [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3] ==> [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.3.3]
+  collapse dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc] ==> [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/lib/gcc]
+  collapse dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/lib] ==> [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/arm-none-linux-gnueabi/lib]
+  collapse dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/lib] ==> [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/arm-none-linux-gnueabi/libc/lib]
+  collapse dir [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/../arm-none-linux-gnueabi/libc/usr/lib] ==> [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/arm-none-linux-gnueabi/libc/usr/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/lib/gcc/arm-none-linux-gnueabi/4.3.3;/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/lib/gcc;/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/arm-none-linux-gnueabi/lib;/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/arm-none-linux-gnueabi/libc/lib;/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/arm-none-linux-gnueabi/libc/usr/lib]
+
+

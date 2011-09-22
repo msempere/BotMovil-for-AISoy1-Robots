@@ -1,0 +1,2 @@
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-ar cr libAISOYAPI.a  CMakeFiles/AISOYAPI.dir/AISoyAPI.c.o
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-ranlib libAISOYAPI.a

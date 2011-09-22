@@ -1,0 +1,2 @@
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-ar cr libAISOYGLOBAL.a  
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-ranlib libAISOYGLOBAL.a

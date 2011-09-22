@@ -1,0 +1,275 @@
+<html>
+<head>
+<title>BotMovil Control for AISoy1</title>
+
+	<script src="./jquery-1.6.2.min.js" type="text/javascript"></script> 
+	<script src="./jquery.jswipe-0.1.2.js" type="text/javascript"></script> 
+	<script type="text/javascript"> 
+			$(document).ready(function() {
+				$('.swipe').swipe()
+			});
+	</script>
+
+	
+	
+
+<style type="text/css"> 
+@import "/static/css/aisoy.css";
+#body {
+	width: 90%;
+}
+#input {
+	font-size: 25px;
+	height:53px;
+	width:200px;
+	margin-left: 36.5%;
+}
+
+img {
+	width: 90%;
+}
+
+p {
+	font-size: 18px;
+	width: 18%;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+div#framesContainer{
+	width:50%; 
+	float:left;
+	}
+	
+div#controlContainer{ 
+	width:49.9%;
+	float:right;
+	}
+	
+
+</style>
+
+</head> 
+
+
+<body id="aisoy">
+
+	<div id="body" class="canSwipeMe">
+		<h1>BotMovil Control for AISoy1</h1>
+		<br>
+		<br>
+		
+		<div id="framesContainer">
+			<img id="frame" src="" onclick="ClickImage(event)"></img>
+		</div>
+		
+		
+		
+		
+		<div id="controlContainer">
+			<table id="controls" align="center">
+			
+				<tr>
+					<td> 
+						<table align="center">
+							<tr>
+									<td></td> 
+									<td align="center"><img style="width: 60%; height: 60%" src="up.png" onclick="Change('up')"></img></td>
+									<td></td>
+							</tr>
+							<tr>
+									<td align="right"><img style="width: 60%; height: 60%" src="left.png" onclick="Change('left')"></img></td> 
+									<td align="center"><img style="width: 60%; height: 60%" src="down.png" onclick="Change('down');"></img></td>
+									<td align="left"><img  style="width: 60%; height: 60%" src="right.png" onclick="Change('right')"></img></td>
+							</tr>			
+						</table>
+					</td>
+					
+					<td>
+						<div id="chart_div">
+						</div>
+
+					</td>
+					
+					
+				</tr>	
+				
+				<tr>
+					<td align="left" ><img src="space.png" onclick="Change('stop')"></img></td>
+				</tr>	
+				
+			</table>
+		</div>
+		 
+		 
+		 
+		 
+	</div>	
+</body>
+	
+
+
+<script>	
+	
+	//define servo max/min movements
+	const maxServo=10;
+	const minServo=0;
+	
+	//center servo position
+	const centerServo=5;
+	
+	//head movements
+	var horizontalHead=centerServo;
+	var verticalHead=centerServo;
+	
+	//browser safari detection
+	var safariBrowser=false;
+    
+    //key movements for head & botmovil motors
+	$(document.documentElement).keyup(function (event) {
+		
+		
+	//arrow keys
+	//left arrow
+	if (event.keyCode == 37) {
+		Change('left');
+	//right arrow
+	} else if (event.keyCode == 39) {
+		Change('right');
+	//up arrow
+	} else if (event.keyCode == 38) {
+		Change('up');
+	//down arrow
+	} else if (event.keyCode == 40) {
+		Change('down');
+		
+		
+	
+	//special keys
+	//spacetab key
+	} else if (event.keyCode == 32) {
+		Change('stop');
+	//backspace key
+	} else if (event.keyCode == 8) {
+		ResetHead();
+		
+		
+	//letter keys
+	//W key
+	}else if (event.keyCode == 87) {
+		MoveHead('up');
+	//S key
+	}else if (event.keyCode == 83) {
+		MoveHead('down');
+	//A key
+	}else if (event.keyCode == 65) {
+		MoveHead('left');
+	//D key
+	}else if (event.keyCode == 68) {
+		MoveHead('right');
+	}
+	})
+    
+    
+	function updateImage(){
+		$('#frame').attr('src','captured.jpg?'+Math.random());
+		setTimeout(updateImage, 1000);
+	}
+    
+
+	$(document).ready(function(){
+
+		updateImage();
+	})
+	
+	
+	function ResetHead(){
+		//$.post('../io/in', {'data': "#head#vertical#5#\n\r"});
+		$.post('../io/in', {'data': "#head#horizontal#5#\n\r"});
+		
+		//reset horizontal servo position
+		horizontalHead=centerServo;
+		verticalHead=centerServo;
+	}
+	
+	
+	function MoveHead(side){
+		if(side=='up' && verticalHead<maxServo){
+			verticalHead=verticalHead+2;
+			$.post('../io/in', {'data': "#head#vertical#" +verticalHead+ "#\n\r"});
+		}
+		else if(side=='down' && verticalHead>minServo){
+			verticalHead=verticalHead-2;
+			$.post('../io/in', {'data': "#head#vertical#" +verticalHead+ "#\n\r"});
+		}
+		else if(side=='left' && horizontalHead>minServo){
+			horizontalHead=horizontalHead-2;
+			$.post('../io/in', {'data': "#head#horizontal#" +horizontalHead+ "#\n\r"});
+		}
+		else if(side=='right' && horizontalHead<maxServo){
+			horizontalHead=horizontalHead+2;
+			$.post('../io/in', {'data': "#head#horizontal#" +horizontalHead+ "#\n\r"});
+		}
+	}
+	
+	
+	function Change(side){
+		if(side=='left'){
+			$.post('../io/in', {'data': "#change#left#\n\r"});
+		}
+		else if(side=='right'){
+			$.post('../io/in', {'data': "#change#right#\n\r"});
+		}
+		
+		else if(side=='up'){
+			$.post('../io/in', {'data': "#change#up#\n\r"});
+		}
+		
+		else if(side=='down'){
+			$.post('../io/in', {'data': "#change#down#\n\r"});
+		}
+		else if(side=='stop'){
+			$.post('../io/in', {'data': "#change#stop#\n\r"});
+		}
+
+	}
+	
+	const xMax=553;
+	const center=276;
+	const rightMax=138;
+	const centerMax=414;
+	
+	//move head with image click
+	function ClickImage(event){
+		
+		//image is scaled to X553px × Y415px
+		var x_click = event.offsetX?(event.offsetX):event.pageX-document.getElementById("frame").offsetLeft;
+		
+		if(x_click>=0 && x_click<=rightMax)
+			MoveHead('right');
+		else if(x_click>rightMax && x_click<centerMax)
+				ResetHead();
+			else
+				MoveHead('left');
+		
+	}
+	
+	
+	//iphone swipe movements
+	$('.canSwipeMe').swipe({
+		 swipeLeft: function() { 
+			 alert("movilBot goes left"); 
+			 Change('left'); 
+		},
+		 swipeRight: function() { 
+			 alert("movilBot goes right"); 
+			 Change('right'); 
+		},
+	})
+	
+	
+   
+</script>
+
+
+</html>

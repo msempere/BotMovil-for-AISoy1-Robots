@@ -1,0 +1,2 @@
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-ar cr libDRACO_GPIO_MOD.a  
+/home/aisoy-sdk/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-ranlib libDRACO_GPIO_MOD.a
