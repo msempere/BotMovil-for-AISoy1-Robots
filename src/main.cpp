@@ -36,7 +36,7 @@ AISoy1::Bot bot;
 
 
 //take photos every second
-void photoTimer() {
+void *photoTimer(void *_) {
 	
 	while(1){
 		//take photo
@@ -50,6 +50,7 @@ void photoTimer() {
 		//linking
 		link("html/captured2.jpg", "html/captured.jpg");
 	}
+	return NULL;
 }
 
 
@@ -148,26 +149,18 @@ void PrepareServos(){
 
 //Do all
 void start() {
-	
-	//child will capture images, father continues
-   int pid = fork();
-   
-   
-   //If Im a child
-   if(pid==0){
-	   photoTimer();
-	}
-	//could not create a child. Maybe we need some viagra, xD
-	else if(pid<0){
+	pthread_t thread;
+
+	int error=pthread_create(&thread, NULL, photoTimer, NULL);
+	if(error){
 		fprintf(stderr,"Error. Fork failed.\n\r");
 		exit(-1);
 	}
 	
 	//If not child
 	else{
-	   PTpid=pid;
-       std::string option;
-       char *selected;
+			std::string option;
+			char *selected;
 	   char *optionSelected;
 
 	   Config();                 
@@ -189,52 +182,54 @@ void start() {
 			
 			//first selected option (first argument)
 			optionSelected=strsep(&selected,"#");
-						
+			
 
 			fprintf(stderr,"OK. Option selected:%s.\n\r",optionSelected );
 			
-			
-			//if "botsay", bot has a new phrase to say
-			if(strcmp(optionSelected,"botsay")==0){
-				char* what = strsep(&selected,"#");
-				fprintf(stderr,"OK. %s, I say.\n\r",what);
-				bot.say(what);
-			}	
-			
-			//if "botvelocity", we must send new velocity to botmovil
-			else if(strcmp(optionSelected,"botvelocity")==0){
-				char* newVelocity = strsep(&selected,"#");
-				fprintf(stderr,"OK. We have a new velocity: %s .\n\r",newVelocity);
-				SendVelocity(newVelocity);
-			}	
-			
-			//if "change", we send a motor movement
-			else if(strcmp(optionSelected,"change")==0){
-				char* side = strsep(&selected,"#");
-				fprintf(stderr,"OK. %s motor movement.\n\r",side);
-				Send(side);
-			} 	
-			
-			//if "head", we apply a head movement
-			else if(strcmp(optionSelected,"head")==0){
+			if (optionSelected){ // Maybe was empty
 				
-				char* headOption = strsep(&selected,"#");
-				char* angle = strsep(&selected,"#");
+				//if "botsay", bot has a new phrase to say
+				if(strcmp(optionSelected,"botsay")==0){
+					char* what = strsep(&selected,"#");
+					fprintf(stderr,"OK. %s, I say.\n\r",what);
+					bot.say(what);
+				}	
 				
-				if(strcmp(headOption,"horizontal")==0){
-					fprintf(stderr,"OK. %s horizontal head movement.\n\r",angle);
-					bot.moveServo(AISoy1::HeadHorizontal,GetHeadAngle(angle));
+				//if "botvelocity", we must send new velocity to botmovil
+				else if(strcmp(optionSelected,"botvelocity")==0){
+					char* newVelocity = strsep(&selected,"#");
+					fprintf(stderr,"OK. We have a new velocity: %s .\n\r",newVelocity);
+					SendVelocity(newVelocity);
+				}	
+				
+				//if "change", we send a motor movement
+				else if(strcmp(optionSelected,"change")==0){
+					char* side = strsep(&selected,"#");
+					fprintf(stderr,"OK. %s motor movement.\n\r",side);
+					Send(side);
+				} 	
+				
+				//if "head", we apply a head movement
+				else if(strcmp(optionSelected,"head")==0){
+					
+					char* headOption = strsep(&selected,"#");
+					char* angle = strsep(&selected,"#");
+					
+					if(strcmp(headOption,"horizontal")==0){
+						fprintf(stderr,"OK. %s horizontal head movement.\n\r",angle);
+						bot.moveServo(AISoy1::HeadHorizontal,GetHeadAngle(angle));
+					}
+					else if(strcmp(headOption,"vertical")==0){
+						fprintf(stderr,"OK. %s vertical head movement.\n\r",angle);
+						bot.moveServo(AISoy1::HeadVertical,GetHeadAngle(angle));
+					} else
+						fprintf(stderr,"Error. Incorrect selection for head movement.\n\r");
+					
 				}
-				else if(strcmp(headOption,"vertical")==0){
-					fprintf(stderr,"OK. %s vertical head movement.\n\r",angle);
-					bot.moveServo(AISoy1::HeadVertical,GetHeadAngle(angle));
-				} else
-					fprintf(stderr,"Error. Incorrect selection for head movement.\n\r");
-				
+				else
+					fprintf(stderr,"Error. Selected option.\n\r");		
 			}
-			else
-				fprintf(stderr,"Error. Selected option.\n\r");		
-	   }
+		}
 	}
 	
 }

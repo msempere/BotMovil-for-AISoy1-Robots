@@ -16,4 +16,5 @@ target_link_libraries(main MIRF)
 target_link_libraries(main AISOYAPI)
 target_link_libraries(main NRF24L01)
 target_link_libraries(main DRACO_GPIO_MOD)
+target_link_libraries(main pthread)
 
